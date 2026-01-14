@@ -14,7 +14,7 @@ export default defineConfig({
   integrations: [astrotion(), sitemap(), robotsTxt()],
   vite: {
     optimizeDeps: { exclude: ["@resvg/resvg-js"] },
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
   trailingSlash: "always",
 });

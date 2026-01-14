@@ -5,29 +5,18 @@ import config from "../../config";
 import Layout from "../../layouts/Layout.astro";
 import { listPosts } from "../../notion";
 
-export async function getStaticPaths() {
-  const { pageSize } = await listPosts(1);
-
-  return Array.from({ length: pageSize }, (_, i) => ({
-    params: { page: (i + 1).toString() },
-  }));
-}
-
-const { page } = Astro.params;
-const { database, totalPages, currentPage, posts } = await listPosts(
-  parseInt(page, 10) || 1,
-);
+const { database, totalPages, currentPage, posts } = await listPosts(1);
 ---
 
 <Layout>
   <main class="py-12 lg:py-20">
     <article class="max-w-6xl mx-auto px-3">
-      <header class="text-center mb-12">
-        <h1 class:list={["mb-12 text-6xl title", config.index?.titleClasses]}>
-          {database.title}
+      <header class="text-center mb-6">
+        <h1 class:list={["mb-4 text-3xl title", config.index?.titleClasses]}>
+          余白
         </h1>
         <p class="mx-auto max-w-xl">
-          Page {currentPage} of {totalPages}
+          {database.description}
         </p>
       </header>
       <PostList posts={posts} />

@@ -9,7 +9,7 @@ export function postUrl(slug: string, base?: string | URL): string {
   if (!path.extname(slug)) {
     slug += "/";
   }
-  return getUrl(`/posts/${slug}`, base);
+  return getUrl(`/blog/${slug}`, base);
 }
 
 export function assetUrl(url: string, base?: string | URL): string {

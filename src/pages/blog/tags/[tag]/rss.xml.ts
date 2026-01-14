@@ -1,8 +1,8 @@
 import rss from "@astrojs/rss";
 
-import { site } from "../../../config";
-import { getDatabaseAndAllPosts, getAllPosts } from "../../../notion";
-import { postUrl } from "../../../utils";
+import { site } from "../../../../config";
+import { getDatabaseAndAllPosts, getAllPosts } from "../../../../notion";
+import { postUrl } from "../../../../utils";
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
@@ -18,7 +18,13 @@ export async function getStaticPaths() {
   }));
 }
 
-export async function GET({ params, site: ctxsite }: { params: { tag: string }, site: string }) {
+export async function GET({
+  params,
+  site: ctxsite,
+}: {
+  params: { tag: string };
+  site: string;
+}) {
   const { database, posts } = await getDatabaseAndAllPosts();
 
   return rss({

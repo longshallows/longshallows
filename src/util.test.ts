@@ -8,6 +8,6 @@ test("getUrl", () => {
 });
 
 test("postUrl", () => {
-  expect.soft(postUrl("aaa.webp")).toBe("/posts/aaa.webp");
-  expect.soft(postUrl("aaa")).toBe("/posts/aaa/");
+  expect.soft(postUrl("aaa.webp")).toBe("/blog/aaa.webp");
+  expect.soft(postUrl("aaa")).toBe("/blog/aaa/");
 });

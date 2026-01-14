@@ -24,8 +24,8 @@ const { database, post, html } = await getPost(slug);
 >
   <main class="py-12 lg:py-20">
     <article class="max-w-5xl mx-auto px-3">
-      <header class="mx-auto pb-12 lg:pb-20 max-w-3xl text-center">
-        <h1 class:list={["text-5xl mb-6 title", config.post?.titleClasses]}>
+      <header class="mx-auto pb-6 lg:pb-10 max-w-3xl text-center">
+        <h1 class:list={["text-4xl mb-2 title", config.post?.titleClasses]}>
           {post.title}
         </h1>
         <p class="text-center">
@@ -45,7 +45,7 @@ const { database, post, html } = await getPost(slug);
       }
       <section
         class:list={[
-          "max-w-3xl mx-auto py-6 lg:py-12 post",
+          "max-w-3xl mx-auto py-6 lg:py-12 mt-4 post",
           config.post?.classes,
         ]}
       >
