@@ -12,6 +12,7 @@ jobs:
     env:
       NOTION_API_SECRET: ${{ secrets.NOTION_API_SECRET }}
       DATABASE_ID: ${{ secrets.DATABASE_ID }}
+      DATASOURCE_ID: ${{ secrets.DATASOURCE_ID }}
       CUSTOM_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
       PUBLIC_GA_TRACKING_ID: ${{ secrets.PUBLIC_GA_TRACKING_ID }}
     steps:
