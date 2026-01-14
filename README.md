@@ -1,14 +1,12 @@
 # Profile & Blog
 
-NotionをCMS化する枠組み(Astrotion)を使用し、複雑化する自分のキャリアや仕事についてまとめました。
+NotionをCMS化する枠組み(Astrotion)を使用し、複雑化する自分のキャリアや仕事についてまとめました。  
 Astrotionによるブログ構築は、サブディレクトリ/blog/にその機能を置くこととしています。
 
 ---
 
 Astrotionの概要は以下のとおり
 
-> # Astrotion
->
 > Astro + Notion + Blog
 >
 > ## What is different from [astro-notion-blog](https://github.com/otoyo/astro-notion-blog)?
@@ -32,17 +30,6 @@ Astrotionの概要は以下のとおり
 > - Math equation rendering
 > - Automatic OG image generation
 >
-> ## Customization
->
-> These files can be customized without concern for conflicts:
->
-> - `public/*`
-> - `src/customization/*`
->
 > ## Showcase
 >
 > - [Re:Earth Engineering](https://reearth.engineering)
->
-> ## How to use
->
-> astrotion was inspired by [astro-notion-blog](https://github.com/otoyo/astro-notion-blog). Therefore, the usage is almost the same as astro-notion-blog. Please follow the instructions [here](https://github.com/otoyo/astro-notion-blog).
