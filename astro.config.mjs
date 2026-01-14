@@ -6,7 +6,6 @@ import robotsTxt from "astro-robots-txt";
 import { BASE_PATH, CUSTOM_DOMAIN } from "./src/constants";
 import astrotion from "./src/integrations";
 
-
 // https://astro.build/config
 export default defineConfig({
   site: getSite(),
