@@ -12,7 +12,7 @@ jobs:
     env:
       NOTION_API_SECRET: ${{ secrets.NOTION_API_SECRET }}
       DATABASE_ID: ${{ secrets.DATABASE_ID }}
-      DATASOURCE_ID: ${{ secrets.DATASOURCE_ID }}
+      DATA_SOURCE_ID: ${{ secrets.DATA_SOURCE_ID }}
       CUSTOM_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
       PUBLIC_GA_TRACKING_ID: ${{ secrets.PUBLIC_GA_TRACKING_ID }}
     steps:
@@ -31,8 +31,8 @@ jobs:
       - name: Deploy to server
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
           server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
           local_path: "./dist/*"
           remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
