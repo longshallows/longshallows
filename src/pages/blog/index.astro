@@ -15,9 +15,7 @@ const { database, totalPages, currentPage, posts } = await listPosts(1);
         <h1 class:list={["mb-4 text-3xl title", config.index?.titleClasses]}>
           余白
         </h1>
-        <p class="mx-auto max-w-xl">
-          {database.description}
-        </p>
+        <p class="mx-auto max-w-xl">仕事、趣味、日常、その他の記録です。</p>
       </header>
       <PostList posts={posts} />
       <Pagination page={currentPage} pageCount={totalPages} />
